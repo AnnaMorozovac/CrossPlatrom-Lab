@@ -18,6 +18,7 @@ import org.jetbrains.compose.resources.painterResource
 
 import laba.composeapp.generated.resources.Res
 import laba.composeapp.generated.resources.compose_multiplatform
+import co.touchlab.kermit.Logger
 
 @Composable
 @Preview
@@ -33,8 +34,11 @@ fun App() {
         ) {
             Text("Hello World!")
             Text(" ")
-            Button(onClick = { showContent = !showContent }) {
-                Text("Click here!")
+            Button(onClick = {
+                showContent = !showContent
+                Logger.i {"Logger for test"}
+            }) {
+                Text("Click me!")
             }
             AnimatedVisibility(showContent) {
                 val greeting = remember { Greeting().greet() }

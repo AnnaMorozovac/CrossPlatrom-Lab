@@ -1,4 +1,4 @@
-package ua.morozova.laba
+package ua.morozova.laba.data.timezones
 
 interface TimeZoneHelper {
     fun getTimeZoneStrings(): List<String>

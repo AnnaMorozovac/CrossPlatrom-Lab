@@ -132,4 +132,10 @@ class TimeZoneHelperImpl : TimeZoneHelper {
         Logger.Companion.d("Hour $hour in Time Range ${otherTimeZone.id} is ${convertedTime.hour}")
         return convertedTime.hour in timeRange
     }
+
+    override fun formatMillis(millis: Long): String {
+        val instant = kotlinx.datetime.Instant.fromEpochMilliseconds(millis)
+        val dateTime = instant.toLocalDateTime(kotlinx.datetime.TimeZone.currentSystemDefault())
+        return "${dateTime.dayOfMonth.toString().padStart(2, '0')}/${dateTime.monthNumber.toString().padStart(2, '0')}/${dateTime.year}"
+    }
 }

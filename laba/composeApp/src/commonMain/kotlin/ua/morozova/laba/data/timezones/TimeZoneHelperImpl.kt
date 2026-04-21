@@ -1,4 +1,4 @@
-package ua.morozova.laba.data.timezone
+package ua.morozova.laba.data.timezones
 
 import co.touchlab.kermit.Logger
 import kotlinx.datetime.LocalDateTime

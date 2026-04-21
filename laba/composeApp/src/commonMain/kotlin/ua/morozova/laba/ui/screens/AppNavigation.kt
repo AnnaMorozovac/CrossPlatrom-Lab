@@ -24,8 +24,7 @@ import laba.composeapp.generated.resources.*
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import ua.morozova.laba.ui.buttons.ButtonsScreen
-import ua.morozova.laba.ui.buttons.ButtonsScreen
-import ua.morozova.laba.ui.screens.main.MainScreen
+import ua.morozova.laba.ui.shared_mobile.main.MainScreen
 
 enum class AppScreen(val title: StringResource) {
     Main(title = Res.string.main), Buttons(title = Res.string.buttons), Checkboxes(title = Res.string.checkboxes),

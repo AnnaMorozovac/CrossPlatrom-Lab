@@ -11,6 +11,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import laba.composeapp.generated.resources.Res
 import laba.composeapp.generated.resources.amaranth_regular
+import laba.composeapp.generated.resources.audiowide_regular
 import org.jetbrains.compose.resources.Font
 
 private val lightScheme = lightColorScheme(
@@ -263,7 +264,7 @@ fun AppTheme(
         else -> lightScheme
     }
 
-    val audioWideFont = Font(Res.font.amaranth_regular)
+    val audioWideFont = Font(Res.font.audiowide_regular)
     val appTypography = remember { getTypography(audioWideFont) }
 
     MaterialTheme(

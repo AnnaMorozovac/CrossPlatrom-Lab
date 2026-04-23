@@ -17,6 +17,10 @@ import androidx.compose.ui.window.rememberWindowState
 import androidx.compose.ui.input.key.Key
 import laba.composeapp.generated.resources.Res
 import laba.composeapp.generated.resources.app_name
+import laba.composeapp.generated.resources.close
+import laba.composeapp.generated.resources.exit
+import laba.composeapp.generated.resources.file
+import laba.composeapp.generated.resources.new
 import org.jetbrains.compose.resources.stringResource
 import ua.morozova.laba.ui.shared_mobile.main.MainScreen
 
@@ -43,11 +47,11 @@ fun main() = application {
             title = windowList[i].windowName
         ) {
             MenuBar {
-                Menu("File", mnemonic = 'F') {
-                    val nextWindowState = rememberWindowState()
+                Menu(stringResource(Res.string.file), mnemonic = 'F') {
                     val windowsName = stringResource(Res.string.app_name, windowCount)
+                    val nextWindowState = rememberWindowState()
                     Item(
-                        "New", onClick = {
+                        stringResource(Res.string.new), onClick = {
                             windowCount++
                             windowList.add(
                                 WindowInfo(
@@ -59,13 +63,13 @@ fun main() = application {
                             Key.N, ctrl = true
                         )
                     )
-                    Item("Close", onClick = {
+                    Item(stringResource(Res.string.close), onClick = {
                         windowList.removeAt(i)
 
                     }, shortcut = KeyShortcut(Key.W, ctrl = true))
                     Separator()
                     Item(
-                        "Exit",
+                        stringResource(Res.string.exit),
                         onClick = { windowList.clear() },
                         shortcut = KeyShortcut(Key.Q, ctrl = true)
                     )
